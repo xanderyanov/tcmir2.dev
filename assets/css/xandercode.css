@@ -1,3 +1,14 @@
+:root {
+  --colorFFF: #fff;
+  --color000: #000;
+  --colorLightGrey: #f6f6fa;
+  --color1: rgba(65, 51, 40, 0.6);
+  --color2: rgba(65, 51, 40, 0.8);
+  --redFill: #f76060;
+  --redFillhover: #ff4141;
+  --tColor: #413328;
+}
+
 .w0 {
   width: 100%;
   position: relative;
@@ -7,7 +18,7 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 10px 10px 10px 10px;
+  padding: 0 0 0 0;
 }
 
 .colorFFF {
