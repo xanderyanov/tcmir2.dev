@@ -145,3 +145,87 @@
   opacity: 1;
   background-color: var(--redFill);
 }
+
+.carousel {
+  position: relative;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+
+.carousel__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.carousel__slide {
+  padding: 2px;
+}
+
+.carousel__slideInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  border: 1px solid #00829b;
+}
+
+.carousel__slideInner img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel__btnArea {
+  display: flex;
+  align-items: center;
+}
+
+.carousel__btn {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #362b23;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin: 0 0 0 10px;
+  outline: none;
+}
+
+.carousel__btn:hover {
+  background: var(--redFill);
+}
+
+.carousel__btn i {
+  color: #362b23;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.carousel__btn:hover i {
+  color: #fff;
+}
+
+.carousel__btnPrev {
+  left: 0;
+}
+.carousel__btnNext {
+  right: 0;
+}

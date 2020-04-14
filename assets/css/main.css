@@ -384,3 +384,122 @@ body {
   font-size: 1rem;
   color: var(--redFill);
 }
+
+.tizers__area {
+  border-bottom: 1px solid rgba(35, 19, 45, 0.1);
+}
+
+.tisers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 98px;
+}
+
+.tizer {
+  display: flex;
+  align-items: center;
+}
+
+.tizer img {
+  display: block;
+  margin-right: 15px;
+}
+
+.tizer span {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  color: #000000;
+}
+
+.xBlock__area {
+}
+
+.xBlock {
+  padding: 60px 0 10px;
+}
+
+.carousel__title {
+  margin-bottom: 30px;
+}
+
+.tovarCard__area {
+  width: 25%;
+}
+
+.tovarCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tovarCard__img {
+  position: relative;
+  width: 100%;
+}
+
+.tovarCard__img img {
+  display: block;
+  width: 100%;
+}
+
+.tovarCard__icons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+}
+
+.tovarCard__icon {
+  height: 3.25rem;
+  width: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0.25rem;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.tovarCard__icon_sale {
+  background: #f95669;
+}
+
+.tovarCard__icon_new {
+  background: #60b9a9;
+}
+.tovarCard__icon_hit {
+  background: #7b539a;
+}
+
+.tovarCard__fav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3.25rem;
+  width: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tovarCard__fav i {
+  font-size: 1.5rem;
+}
+
+.tovarCard__fav i.icon-favorit2 {
+  color: var(--redFillhover);
+}
+
+.tovarCard__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tovarCard__infoTop {
+  display: flex;
+}
