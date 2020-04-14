@@ -87,4 +87,47 @@ $(function () {
       },
     });
   }
+  if ($(".carousel__container2").length) {
+    var carousel = new Swiper(".carousel__container2", {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".carousel__btnNext2",
+        prevEl: ".carousel__btnPrev2",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        920: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        600: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        480: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        320: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
 });
