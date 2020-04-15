@@ -1,4 +1,48 @@
 $(function () {
+  $(".catalogBtn").click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      $(".menuButton").removeClass("open");
+      $(".adaptiveMenu__outer").slideUp(200);
+    } else {
+      $(this).addClass("open");
+      $(".menuButton").addClass("open");
+      $(".adaptiveMenu__outer").slideDown(200);
+      var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
+      console.log("adaptiveMenuH " + adaptiveMenuH);
+      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH });
+      // $(".alev1 a").addClass("witeTab");
+      // $(".alev1 > a").append('<div class="witeTab"></div>');
+      // $(".witeTab").css({ height: adaptiveMenuH });
+    }
+  });
+
+  // отслеживание поведения адаптивного меню при изменении размера экрана
+  $(window).resize(function () {
+    if ($(".header__area").width() > 600) {
+      var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
+      console.log("adaptiveMenuH " + adaptiveMenuH);
+      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH });
+      $(".adaptiveMenu li.alev1 > a:before").css({ height: adaptiveMenuH });
+    } else {
+      var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
+      console.log("adaptiveMenuH " + adaptiveMenuH);
+      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH });
+      $(".witeTab").css({ height: adaptiveMenuH });
+    }
+  });
+
+  $(".alev1").hover(
+    function () {
+      $(this).addClass("hover");
+      $(this).addClass("hover");
+    },
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {
       slidesPerView: 1,
