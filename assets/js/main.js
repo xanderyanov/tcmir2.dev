@@ -17,14 +17,14 @@ $(function () {
     }
   });
   //и без него работает - делал из за того, что наведение под пунктом включалось, но заменил псевдокласс на append блок
-  // $(".rmlev1").hover(
-  //   function () {
-  //     $(this).addClass("hover");
-  //   },
-  //   function () {
-  //     $(this).removeClass("hover");
-  //   }
-  // );
+  $(".rmlev1").hover(
+    function () {
+      $(this).addClass("hover");
+    },
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
 
   // отслеживание поведения меню при изменении размера экрана
   $(window).resize(function () {
@@ -33,11 +33,17 @@ $(function () {
       console.log("redMenuH " + redMenuH);
       $(".redMenu li.rmlev1 > ul").css({ top: redMenuH });
       $(".whiteTab").css({ height: redMenuH });
+      // ***************
+      var adaptiveHeaderH = $(".adaptiveHeader").outerHeight();
+      $(".adaptiveHeader__fake").css({ height: adaptiveHeaderH });
     } else {
       var redMenuH = $(".redMenu").outerHeight();
       console.log("redMenuH " + redMenuH);
       $(".redMenu li.rmlev1 > ul").css({ top: redMenuH, minHeight: redMenuH });
       $(".whiteTab").css({ height: redMenuH });
+      // ***************
+      var adaptiveHeaderH = $(".adaptiveHeader").outerHeight();
+      $(".adaptiveHeader__fake").css({ height: adaptiveHeaderH });
     }
   });
 
@@ -89,7 +95,7 @@ $(function () {
   if ($(".carousel__container1").length) {
     var carousel = new Swiper(".carousel__container1", {
       slidesPerView: 1,
-      spaceBetween: 15,
+      spaceBetween: 0,
       slidesPerGroup: 1,
       loop: true,
       loopFillGroupWithBlank: true,
@@ -102,29 +108,29 @@ $(function () {
         prevEl: ".carousel__btnPrev1",
       },
       breakpoints: {
-        1024: {
+        1140: {
           slidesPerView: 4,
           spaceBetween: 40,
         },
         920: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+          slidesPerView: 3,
+          spaceBetween: 30,
         },
         768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+          slidesPerView: 3,
+          spaceBetween: 20,
         },
         600: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+          slidesPerView: 3,
+          spaceBetween: 10,
         },
         480: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+          slidesPerView: 2,
+          spaceBetween: 20,
         },
-        320: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+        321: {
+          slidesPerView: 2,
+          spaceBetween: 10,
         },
       },
     });
@@ -145,29 +151,29 @@ $(function () {
         prevEl: ".carousel__btnPrev2",
       },
       breakpoints: {
-        1024: {
+        1140: {
           slidesPerView: 4,
           spaceBetween: 40,
         },
         920: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+          slidesPerView: 3,
+          spaceBetween: 30,
         },
         768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+          slidesPerView: 3,
+          spaceBetween: 20,
         },
         600: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+          slidesPerView: 3,
+          spaceBetween: 10,
         },
         480: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+          slidesPerView: 2,
+          spaceBetween: 20,
         },
-        320: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+        321: {
+          slidesPerView: 2,
+          spaceBetween: 10,
         },
       },
     });
