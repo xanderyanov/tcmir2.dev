@@ -1,4 +1,8 @@
 $(function () {
+  // $(".alev1 > a").append('<div class="whiteTab"></div>');
+  // var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
+  // console.log("adaptiveMenuH " + adaptiveMenuH);
+
   $(".catalogBtn").click(function (e) {
     e.preventDefault();
     if ($(this).hasClass("open")) {
@@ -11,10 +15,9 @@ $(function () {
       $(".adaptiveMenu__outer").slideDown(200);
       var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
       console.log("adaptiveMenuH " + adaptiveMenuH);
-      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH });
-      // $(".alev1 a").addClass("witeTab");
-      // $(".alev1 > a").append('<div class="witeTab"></div>');
-      // $(".witeTab").css({ height: adaptiveMenuH });
+      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH, minHeight: adaptiveMenuH });
+      $(".alev1 > a").append('<div class="whiteTab"></div>');
+      $(".whiteTab").css({ height: adaptiveMenuH });
     }
   });
 
@@ -24,12 +27,12 @@ $(function () {
       var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
       console.log("adaptiveMenuH " + adaptiveMenuH);
       $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH });
-      $(".adaptiveMenu li.alev1 > a:before").css({ height: adaptiveMenuH });
+      $(".whiteTab").css({ height: adaptiveMenuH });
     } else {
       var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
       console.log("adaptiveMenuH " + adaptiveMenuH);
-      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH });
-      $(".witeTab").css({ height: adaptiveMenuH });
+      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH, minHeight: adaptiveMenuH });
+      $(".whiteTab").css({ height: adaptiveMenuH });
     }
   });
 
