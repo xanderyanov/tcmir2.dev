@@ -1,50 +1,45 @@
 $(function () {
-  // $(".alev1 > a").append('<div class="whiteTab"></div>');
-  // var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
-  // console.log("adaptiveMenuH " + adaptiveMenuH);
-
   $(".catalogBtn").click(function (e) {
     e.preventDefault();
     if ($(this).hasClass("open")) {
       $(this).removeClass("open");
       $(".menuButton").removeClass("open");
-      $(".adaptiveMenu__outer").slideUp(200);
+      $(".redMenu__outer").slideUp(200);
     } else {
       $(this).addClass("open");
       $(".menuButton").addClass("open");
-      $(".adaptiveMenu__outer").slideDown(200);
-      var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
-      console.log("adaptiveMenuH " + adaptiveMenuH);
-      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH, minHeight: adaptiveMenuH });
-      $(".alev1 > a").append('<div class="whiteTab"></div>');
-      $(".whiteTab").css({ height: adaptiveMenuH });
+      $(".redMenu__outer").slideDown(200);
+      var redMenuH = $(".redMenu").outerHeight();
+      console.log("redMenuH " + redMenuH);
+      $(".redMenu li.rmlev1 > ul").css({ top: redMenuH, minHeight: redMenuH });
+      $(".rmlev1 > a").append('<div class="whiteTab"></div>');
+      $(".whiteTab").css({ height: redMenuH });
     }
   });
+  //и без него работает - делал из за того, что наведение под пунктом включалось, но заменил псевдокласс на append блок
+  // $(".rmlev1").hover(
+  //   function () {
+  //     $(this).addClass("hover");
+  //   },
+  //   function () {
+  //     $(this).removeClass("hover");
+  //   }
+  // );
 
-  // отслеживание поведения адаптивного меню при изменении размера экрана
+  // отслеживание поведения меню при изменении размера экрана
   $(window).resize(function () {
     if ($(".header__area").width() > 600) {
-      var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
-      console.log("adaptiveMenuH " + adaptiveMenuH);
-      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH });
-      $(".whiteTab").css({ height: adaptiveMenuH });
+      var redMenuH = $(".redMenu").outerHeight();
+      console.log("redMenuH " + redMenuH);
+      $(".redMenu li.rmlev1 > ul").css({ top: redMenuH });
+      $(".whiteTab").css({ height: redMenuH });
     } else {
-      var adaptiveMenuH = $(".adaptiveMenu").outerHeight();
-      console.log("adaptiveMenuH " + adaptiveMenuH);
-      $(".adaptiveMenu li.alev1 > ul").css({ top: adaptiveMenuH, minHeight: adaptiveMenuH });
-      $(".whiteTab").css({ height: adaptiveMenuH });
+      var redMenuH = $(".redMenu").outerHeight();
+      console.log("redMenuH " + redMenuH);
+      $(".redMenu li.rmlev1 > ul").css({ top: redMenuH, minHeight: redMenuH });
+      $(".whiteTab").css({ height: redMenuH });
     }
   });
-
-  $(".alev1").hover(
-    function () {
-      $(this).addClass("hover");
-      $(this).addClass("hover");
-    },
-    function () {
-      $(this).removeClass("hover");
-    }
-  );
 
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {

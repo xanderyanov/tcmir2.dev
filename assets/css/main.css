@@ -56,17 +56,36 @@ body {
   font-size: 0.75rem;
   color: var(--color1);
   margin-right: 10px;
+  transition: all .3s;
 }
 
 .topLine__item span {
   font-size: 1rem;
   color: var(--color1);
+  transition: all .3s;
 }
 
 .topLine__item a {
+  font-weight: 600;
   font-size: 1rem;
   color: var(--color1);
   text-decoration: none;
+  transition: all .3s;
+}
+.topLine__item a:hover{
+  color: var(--redFillhover);
+}
+
+
+.topLine__item3{
+  text-decoration: none;
+}
+
+.topLine__item3:hover i{
+  color: var(--redFillhover);
+}
+.topLine__item3:hover span{
+  color: var(--redFillhover);
 }
 
 .topLine__right {
@@ -200,21 +219,21 @@ body {
 }
 
 
-.adaptiveMenu__landingOuter{
+.redMenu__landingOuter{
   width: 100%;
   position: relative;
   height: 1px;
   background: rgba(17, 17, 17, 0.1);;
 }
 
-.adaptiveMenu__landing{
+.redMenu__landing{
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
 }
 
-.adaptiveMenu__outer{
+.redMenu__outer{
   position: absolute;
   left: 0;
   top: 0;
@@ -224,7 +243,7 @@ body {
   display: none;
 }
 
-.adaptiveMenu__area{
+.redMenu__area{
   position: relative;
   width: 100%;
   border-top: 1px solid rgba(17, 17, 17, 0.1);
@@ -232,19 +251,19 @@ body {
   border-radius: 2px;
 }
 
-.adaptiveMenu{
+.redMenu{
   display: flex;
   flex-wrap: wrap;
   position: relative;
   padding: 10px;
 }
 
-.adaptiveMenu li.alev1{
+.redMenu li.rmlev1{
   list-style: none;
 
 }
 
-.adaptiveMenu li.alev1 > a{
+.redMenu li.rmlev1 > a{
   font-size: 1.125rem;
   text-decoration: none;
   /* color: var(--tColor); */
@@ -254,7 +273,7 @@ body {
   position: relative;
   z-index: 1;
 }
-.adaptiveMenu li.alev1 > a > span{
+.redMenu li.rmlev1 > a > span{
   font-size: 1.125rem;
   color: #fff;
   position: relative;
@@ -277,19 +296,19 @@ body {
 }
 
 
-.adaptiveMenu li.alev1:hover > a span{
+.redMenu li.rmlev1:hover > a span{
   color: var(--redFillhover);
 }
 
-.adaptiveMenu li.alev1:hover > a > .whiteTab{
+.redMenu li.rmlev1:hover > a > .whiteTab{
   visibility: visible;
 }
 
-/* .adaptiveMenu li.alev1:hover > a{
+/* .redMenu li.rmlev1:hover > a{
   background: #fff;
 } */
 
-.adaptiveMenu li.alev1 > ul{
+.redMenu li.rmlev1 > ul{
   display: none;
   /* display: flex; */
   position: absolute;
@@ -304,19 +323,19 @@ body {
   
 }
 
-.adaptiveMenu li.alev1:hover > ul{
+.redMenu li.rmlev1:hover > ul{
   display: flex;
   
 } 
 
 
  
-.adaptiveMenu li.alev2{
+.redMenu li.rmlev2{
   list-style: none;
   padding: 0 30px 0 0;
 }
 
-.adaptiveMenu li.alev2 > a{
+.redMenu li.rmlev2 > a{
   font-size: 1rem;
   /* text-decoration: none; */
   color: var(--tColor);
@@ -328,20 +347,20 @@ body {
 
 }
 
-.adaptiveMenu li.alev2 > a:hover{
+.redMenu li.rmlev2 > a:hover{
   color: var(--redFillhover);
 }
 
-.adaptiveMenu li.alev2 > ul{
+.redMenu li.rmlev2 > ul{
 
 
 }
 
-.adaptiveMenu li.alev3{
+.redMenu li.rmlev3{
   list-style: none;
 }
 
-.adaptiveMenu li.alev3 > a{
+.redMenu li.rmlev3 > a{
   font-size: .875rem;
   text-decoration: none;
   color: var(--tColor);
@@ -350,7 +369,7 @@ body {
   display: flex;
 }
 
-.adaptiveMenu li.alev3 > a:hover{
+.redMenu li.rmlev3 > a:hover{
   color: var(--redFillhover);
 }
 
@@ -396,6 +415,11 @@ body {
   color: var(--color2);
   height: 2.875rem;
   width: 15%;
+  cursor: pointer;
+  transition: all .3s;
+}
+.topSearch__btn:hover {
+  background: var(--redFillhover);
 }
 
 .topSearch__btn i {
