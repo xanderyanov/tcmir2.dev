@@ -324,10 +324,7 @@
 }
 
 .breadcrumbs__area {
-  display: block;
-  margin: 0 0 10px 0;
-  padding: 0 0 10px;
-  border-bottom: 2px solid #e8e8e8;
+  padding: 20px 0 20px;
 }
 .breadcrumbs {
   display: block;
@@ -357,11 +354,11 @@
   position: relative;
 }
 .breadcrumbs div a:hover {
-  color: #be3f46;
+  color: var(--redFillhover);
 }
 
 .breadcrumbs div span {
-  color: #be3f46;
+  color: var(--redFillhover);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.2;
@@ -484,7 +481,7 @@ form.form-search .inputs-group .search-submit:hover {
   margin: 0;
   display: flex;
   align-items: center;
-  flex-wrap: ;
+  flex-wrap: wrap;
 }
 
 .pagin ul.pagination li {

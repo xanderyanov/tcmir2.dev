@@ -592,6 +592,10 @@ body {
 }
 
 .xBlock {
+  padding: 20px 0;
+}
+
+.xBlock_padding {
   padding: 60px 0 30px;
 }
 
@@ -601,6 +605,7 @@ body {
 
 .tovarCard__area {
   width: 25%;
+  padding: 20px;
 }
 
 .tovarCard {
@@ -664,9 +669,14 @@ body {
 
 .tovarCard__fav i {
   font-size: 1.5rem;
+  transition: all 0.3s;
 }
 
 .tovarCard__fav i.icon-favorit2 {
+  color: var(--redFill);
+}
+
+.tovarCard__fav:hover i {
   color: var(--redFillhover);
 }
 
@@ -718,6 +728,7 @@ body {
   font-size: 1.75rem;
   line-height: 1.1;
   color: var(--tColor);
+  transition: all 0.3s;
 }
 
 .tovarCard__call {
@@ -725,6 +736,10 @@ body {
   outline: none;
   border: none;
   background: transparent;
+}
+
+.tovarCard__call:hover i {
+  color: var(--redFillhover);
 }
 
 .tovarCard__buy {
@@ -735,12 +750,24 @@ body {
   background: transparent;
 }
 
+.tovarCard__buy:hover i {
+  color: var(--redFillhover);
+}
+
 .tovarCard__infoTitle {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.25rem;
   color: var(--tColor);
   padding-right: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.tovarCard__infoTitle:hover {
+  color: var(--redFillhover);
+  text-decoration: underline;
 }
 
 .blog__area {
@@ -1199,7 +1226,7 @@ body {
 }
 
 .adaptiveMenu__area {
-  background: rgba(247, 96, 96, 0.9);
+  background: rgba(247, 96, 96, 0.95);
 
   position: fixed;
   top: 0;
@@ -1290,7 +1317,7 @@ body {
   list-style: none;
 }
 
-.adaptiveMenu li.alev1 a {
+.adaptiveMenu li.alev1 > a {
   display: flex;
   align-items: center;
   padding: 1rem 0.5rem;
@@ -1353,4 +1380,68 @@ body {
   text-decoration: none;
   font-weight: 600;
   color: #fff;
+  position: relative;
+  padding: 0 0 0 20px;
+}
+
+.adaptiveMenuUlTitleBack:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 5px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+}
+
+.category__area {
+  position: relative;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+
+.tagsBox__area {
+  position: relative;
+}
+
+.tagsBox {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+
+.tagsItem {
+  padding: 0.625rem;
+  margin: 5px;
+  background: #e5e5e5;
+  color: var(--tColor);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.875rem;
+}
+.tagsItem:hover {
+  transform: translateY(-3px);
+}
+
+.tagsItem_active {
+  background: var(--redFill);
+  color: #fff;
+}
+
+.tagsItem_disable {
+  background: #6b6b6b;
+  color: #fff;
+  cursor: default;
+}
+.tagsItem_disable:hover {
+  transform: translateY(0);
 }

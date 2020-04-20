@@ -91,28 +91,9 @@ $(function () {
       .prepend(
         "<div class='adaptiveMenuUlTitle'><span>" +
           liTitle +
-          "</span><div class='adaptiveMenuUlTitleBack'>-Назад</div></div>"
+          "</span><div class='adaptiveMenuUlTitleBack'>Назад</div></div>"
       );
   });
-  //
-  //
-  //
-
-  // var liTitle = $(".adaptiveMenu li:has(ul) > a").text();
-  // console.log("liTitle " + liTitle);
-
-  // var liTitle = $(".adaptiveMenuUlTitle").parent().parent().children("a").text();
-  // console.log("liTitle " + liTitle);
-  //
-  //
-  // var hasInnerLiTitle = $(".adaptiveMenu li:has(ul)").children("a").text();
-  // $(".adaptiveMenu li:has(ul) > ul").prepend(
-  //   "<div class='adaptiveMenuUlTitle'><span>" +
-  //     hasInnerLiTitle +
-  //     "</span><div class='adaptiveMenuUlTitleBack'>-Назад</div></div>"
-  // );
-  //
-  //
 
   var x = 0;
   $(".adaptiveMenu li.hasInner > a").click(function (e) {
@@ -131,17 +112,6 @@ $(function () {
     console.log(x);
     $(".adaptiveMenu").animate({ left: x + "%" }, 300);
   });
-
-  // Выводить в цикле содержимое пунктов списка до тех пор,
-  // пока не попадется <li> с классом 'stop'.
-
-  //
-  //
-  //
-  //
-  //
-  //
-  //
 
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {
