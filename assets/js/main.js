@@ -47,6 +47,102 @@ $(function () {
     }
   });
 
+  $(".aH__searchOnBtn").click(function () {
+    $(this).toggleClass("open");
+    $(".adaptiveSearch__area").slideToggle();
+  });
+
+  $(".adaptiveSearch__areaClose").click(function () {
+    $(".aH__searchOnBtn").toggleClass("open");
+    $(".adaptiveSearch__area").slideToggle();
+  });
+
+  // Открытие и закрытие адаптивного меню по кнопке
+  $(".aHmenuBtn__areaJS").click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      $(".aHmenuBtn").removeClass("open");
+      $(".adaptiveMenu__areaJS").slideUp(200);
+    } else {
+      $(this).addClass("open");
+      $(".aHmenuBtn").addClass("open");
+      $(".adaptiveMenu__areaJS").slideDown(200);
+      var adaptiveMenu__titleH = $(".adaptiveMenu__title").outerHeight();
+      console.log("adaptiveMenu__titleH " + adaptiveMenu__titleH);
+      // Код выше показывает высоту заголовка адаптивного меню -
+      // и задает отступ пунктов - код ниже
+      $(".adaptiveMenu__wrapper").css({ paddingTop: adaptiveMenu__titleH });
+    }
+  });
+  // Закрытие адаптивного меню по кнопке Close
+  $(".adaptiveMenu__areaClose").click(function () {
+    $(".aHmenuBtn__areaJS").removeClass("open");
+    $(".aHmenuBtn").removeClass("open");
+    $(".adaptiveMenu__areaJS").slideUp(200);
+  });
+
+  // создание блока заголовка дочернего меню и кнопки назад
+  $(".adaptiveMenu li:has(ul)").addClass("hasInner");
+  $(".adaptiveMenu li.hasInner").each(function () {
+    var liTitle = $(this).children("a").text();
+    $(this)
+      .children("ul")
+      .prepend(
+        "<div class='adaptiveMenuUlTitle'><span>" +
+          liTitle +
+          "</span><div class='adaptiveMenuUlTitleBack'>-Назад</div></div>"
+      );
+  });
+  //
+  //
+  //
+
+  // var liTitle = $(".adaptiveMenu li:has(ul) > a").text();
+  // console.log("liTitle " + liTitle);
+
+  // var liTitle = $(".adaptiveMenuUlTitle").parent().parent().children("a").text();
+  // console.log("liTitle " + liTitle);
+  //
+  //
+  // var hasInnerLiTitle = $(".adaptiveMenu li:has(ul)").children("a").text();
+  // $(".adaptiveMenu li:has(ul) > ul").prepend(
+  //   "<div class='adaptiveMenuUlTitle'><span>" +
+  //     hasInnerLiTitle +
+  //     "</span><div class='adaptiveMenuUlTitleBack'>-Назад</div></div>"
+  // );
+  //
+  //
+
+  var x = 0;
+  $(".adaptiveMenu li.hasInner > a").click(function (e) {
+    e.preventDefault();
+    // $(this).addClass("active");
+    console.log(x);
+    x = x - 100;
+    console.log(x);
+    $(".adaptiveMenu").animate({ left: x + "%" }, 300);
+  });
+
+  $(".adaptiveMenuUlTitleBack").click(function (e) {
+    e.preventDefault();
+    console.log("клик назад ");
+    x = x + 100;
+    console.log(x);
+    $(".adaptiveMenu").animate({ left: x + "%" }, 300);
+  });
+
+  // Выводить в цикле содержимое пунктов списка до тех пор,
+  // пока не попадется <li> с классом 'stop'.
+
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {
       slidesPerView: 1,

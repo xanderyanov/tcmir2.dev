@@ -313,6 +313,9 @@
   .aHmenuBtn__area {
     padding: 2px;
   }
+  .adaptiveSearch {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 320px) {
