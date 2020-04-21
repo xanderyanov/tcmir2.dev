@@ -1,0 +1,11 @@
+.custom-control-label {
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: top;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: var(--redFill);
+  background-color: var(--redFill);
+}

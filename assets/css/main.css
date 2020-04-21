@@ -1445,3 +1445,91 @@ body {
 .tagsItem_disable:hover {
   transform: translateY(0);
 }
+
+.filterBox__area {
+  position: relative;
+}
+
+.filterBox {
+  position: relative;
+}
+
+.filterForm {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.filter__outer {
+  width: 33.333%;
+  padding: 10px;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: var(--colorLightGrey);
+  height: 100%;
+}
+
+.filter__title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--tColor);
+}
+
+.filter__content {
+  /* display: flex; */
+}
+
+/* .filter__content_checkbox1 {
+  flex-direction: column;
+}
+
+.filter__content_radio1 {
+  flex-direction: column;
+}
+
+.filter__item {
+  position: relative;
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.filter__item:last-child {
+  margin-bottom: 0;
+}
+
+.filter__item_checkbox {
+  flex-wrap: nowrap;
+}
+
+.filter__item_radio {
+  flex-wrap: nowrap;
+}
+
+.filter__item_100 {
+  width: 100%;
+}
+
+.filter__item_column{
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.checkboxInput1 {
+  margin: 0 10px 0 0;
+}
+
+.radioInput1 {
+  margin: 0 10px 0 0;
+}
+
+.checkboxLabel {
+  font-size: 0.875rem;
+}
+
+.radioLabel {
+  font-size: 0.875rem;
+}
+ */

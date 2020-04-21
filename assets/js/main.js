@@ -113,6 +113,39 @@ $(function () {
     $(".adaptiveMenu").animate({ left: x + "%" }, 300);
   });
 
+  //
+  //
+  // ползунок одинарный
+  var el;
+  // $(".filter__itemRange input")
+  //   .change(function () {
+  //     el = $(this);
+  //     el(".range1").text(el.val());
+  //   })
+  //   .trigger("change");
+
+  //
+
+  var rangeSlider = function () {
+    var slider = $(".filter__itemRange"),
+      range = $('.filter__itemRange input[type="range"]'),
+      value = $(".range1");
+    slider.each(function () {
+      value.each(function () {
+        var value = $(this).next().attr("value");
+        $(this).html(value);
+      });
+      range.on("input", function () {
+        $(this).prev(value).html(this.value);
+      });
+    });
+  };
+  rangeSlider();
+  //
+  //
+  //
+  //
+
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {
       slidesPerView: 1,
