@@ -26,9 +26,14 @@ $(function () {
     }
   );
 
+  if ($(".adaptiveHeader").length) {
+    var adaptiveHeaderH = $(".adaptiveHeader").outerHeight();
+    $(".adaptiveHeader__fake").css({ height: adaptiveHeaderH });
+  }
+
   // отслеживание поведения меню при изменении размера экрана
   $(window).resize(function () {
-    if ($(".header__area").width() > 600) {
+    if ($(".header__area").width() > 1024) {
       var redMenuH = $(".redMenu").outerHeight();
       console.log("redMenuH " + redMenuH);
       $(".redMenu li.rmlev1 > ul").css({ top: redMenuH });
@@ -129,22 +134,96 @@ $(function () {
   var rangeSlider = function () {
     var slider = $(".filter__itemRange"),
       range = $('.filter__itemRange input[type="range"]'),
-      value = $(".range1");
+      valueBox = $(".valueBox");
     slider.each(function () {
-      value.each(function () {
+      valueBox.each(function () {
         var value = $(this).next().attr("value");
         $(this).html(value);
       });
       range.on("input", function () {
-        $(this).prev(value).html(this.value);
+        $(this).prev(valueBox).html(this.value);
+
+        //далее работа с значениями - функционал весь выше
+        //
+        // Выводит значение активного движка - показывая, что он задает - min или max
+        // var sIdx = $(this).attr("name");
+        // var sIdxVal = $(this).val();
+        // console.log(sIdx + "-" + sIdxVal);
+        //
+
+        var minInt = parseInt($('.filter__itemRange input[name = "min-id1"]').val());
+        var maxInt = parseInt($('.filter__itemRange input[name = "max-id1"]').val());
+        // .attr(attributeName, value);
+        console.log("Минимальный интервал" + minInt);
+        console.log("Максимальный интервал" + maxInt);
+
+        if (minInt >= maxInt) {
+          $('.filter__itemRange input[name = "min-id1"]').val(maxInt);
+        }
+
+        if (maxInt <= minInt) {
+          $('.filter__itemRange input[name = "max-id1"]').val(minInt);
+        }
+
+        // Задаем значение min и max - с очень смешным эффектом - но рабочим вариантом
+        // $('.filter__itemRange input[name = "min-id1"]').attr("max", maxInt);
+        // $('.filter__itemRange input[name = "max-id1"]').attr("min", minInt);
+        //
       });
     });
   };
   rangeSlider();
+
   //
   //
+  var noUiSlider1 = document.getElementById("noUiSlider1");
+
+  var marginMin = document.getElementById("slider-margin-value-min");
+  var marginMax = document.getElementById("slider-margin-value-max");
+
+  noUiSlider.create(noUiSlider1, {
+    start: [100, 800],
+    step: 1,
+    connect: true,
+    range: {
+      min: 0,
+      max: 1000,
+    },
+  });
+
+  var marginMin = document.getElementById("slider-margin-value-min");
+  var marginMax = document.getElementById("slider-margin-value-max");
+
+  noUiSlider1.noUiSlider.on("update", function (values, handle) {
+    if (handle) {
+      marginMax.innerHTML = values[handle];
+      console.log("Максимальный интервал" + marginMax.innerHTML);
+    } else {
+      marginMin.innerHTML = values[handle];
+      console.log("Минимальный интервал" + marginMin.innerHTML);
+    }
+  });
   //
+  // var Rmin = $('input[name="min-id1"]');
+  // var Rmax = $('input[name="max-id1"]');
+
+  // - выводит в консоли все дивы с их классами
+  // $("div").each(function (index, value) {
+  //   console.log("div" + index + ":" + $(this).attr("class"));
+  // });
   //
+
+  // var dubleRangeSlider = function () {
+  //   console.log("запуск функции dubleRangeSlider");
+  //   var dubleRangeSlider = $(".dubleRange");
+  //   dubleRangeSlider.each(function () {
+  //     var min = $(this).children(".dubleRangeMin").children('input[name="min-id1"]').attr("value");
+
+  //     console.log(min);
+  //   });
+  // };
+
+  // dubleRangeSlider();
 
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {

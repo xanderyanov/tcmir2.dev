@@ -108,6 +108,10 @@
     width: 33.333%;
     padding: 10px;
   }
+  .filter__outer {
+    width: 50%;
+    padding: 10px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -274,6 +278,10 @@
   }
   .tovarCard__area {
     width: 50%;
+    padding: 10px;
+  }
+  .filter__outer {
+    width: 100%;
     padding: 10px;
   }
 }
