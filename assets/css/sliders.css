@@ -228,3 +228,265 @@
 .carousel__btnNext {
   right: 0;
 }
+
+/* слайдер на странице товара */
+.tovarPage__slider {
+  width: 70%;
+  padding: 0 20px 0 0;
+}
+
+.swiper-container2 {
+  width: 100%;
+  /* height: 500px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-container2 .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide2 {
+  width: 100%;
+  /* height: 500px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+  background: #fff;
+  overflow: hidden;
+}
+.swiper-slide2 a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide2 img {
+  display: block;
+  max-height: 100%;
+  /* width: 100%; */
+}
+
+.gallery-top {
+  /*height: 80%;*/
+  /*width: 100%;*/
+  border: 1px solid #bebebe;
+}
+.gallery-thumbs {
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  padding: 5px;
+  border: 1px solid #bebebe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-thumbs .swiper-slide img {
+  display: block;
+  max-width: 100%;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+/* 
+.gallery-thumbs .swiper-slide-active{
+  opacity: 1;
+} */
+
+.swiper-button-prev2,
+.swiper-button-next2 {
+  background-color: #a6a6a6;
+  background-image: none !important;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  margin-top: -20px;
+  transition: all 0.3s;
+}
+
+.swiper-button-prev2 i,
+.swiper-button-next2 i {
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.swiper-button-prev2:hover,
+.swiper-button-next2:hover {
+  background: #be3f46;
+  background-image: none;
+}
+
+.swiper-button-prev2:hover i,
+.swiper-button-next2:hover i {
+  color: #fff;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  content: "";
+}
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  content: "";
+}
+
+/* 2222222222222 */
+
+/* слайдер на странице товара */
+.tovarPage__slider2 {
+  width: 100%;
+  padding: 0 20px 0 0;
+  display: flex;
+  align-items: flex-start;
+  height: 60vh;
+}
+
+.swiper-container2 {
+  width: 100%;
+  /* height: 500px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-container2 .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide2 {
+  width: 100%;
+  /* height: 500px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+  background: #fff;
+  overflow: hidden;
+}
+.swiper-slide2 a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide2 img {
+  display: block;
+  max-height: 100%;
+  /* width: 100%; */
+}
+
+.gallery-top {
+  /*height: 80%;*/
+  /*width: 100%;*/
+  border: 1px solid #bebebe;
+}
+.gallery-top-v {
+  height: 100%;
+}
+
+.gallery-thumbs {
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.gallery-thumbs-v {
+  padding: 0 0 0 10px;
+  width: 20%;
+  height: 100%;
+}
+
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  padding: 5px;
+  border: 1px solid #bebebe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-thumbs-v .swiper-slide {
+  width: 100%;
+  height: 20%;
+  opacity: 0.4;
+  padding: 1px;
+  border: 1px solid #bebebe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-thumbs .swiper-slide img {
+  display: block;
+  max-width: 100%;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+/* 
+.gallery-thumbs .swiper-slide-active{
+  opacity: 1;
+} */
+
+.swiper-button-prev2,
+.swiper-button-next2 {
+  background-color: #a6a6a6;
+  background-image: none !important;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  margin-top: -20px;
+  transition: all 0.3s;
+}
+
+.swiper-button-prev2 i,
+.swiper-button-next2 i {
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.swiper-button-prev2:hover,
+.swiper-button-next2:hover {
+  background: #be3f46;
+  background-image: none;
+}
+
+.swiper-button-prev2:hover i,
+.swiper-button-next2:hover i {
+  color: #fff;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  content: "";
+}
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  content: "";
+}

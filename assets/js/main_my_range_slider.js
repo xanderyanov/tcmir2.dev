@@ -120,46 +120,119 @@ $(function () {
 
   //
   //
+  // ползунок одинарный
+  var el;
+  // $(".filter__itemRange input")
+  //   .change(function () {
+  //     el = $(this);
+  //     el(".range1").text(el.val());
+  //   })
+  //   .trigger("change");
 
-  if ($("#noUiSlider1").length) {
-    var noUiSlider1 = document.getElementById("noUiSlider1");
-
-    var marginMin = document.getElementById("slider-margin-value-min");
-    var marginMax = document.getElementById("slider-margin-value-max");
-
-    noUiSlider.create(noUiSlider1, {
-      start: [100, 800],
-      step: 1,
-      connect: true,
-      range: {
-        min: 0,
-        max: 1000,
-      },
-      //код ниже убирает дробные нули
-      format: {
-        from: function (value) {
-          return parseInt(value);
-        },
-        to: function (value) {
-          return parseInt(value);
-        },
-      },
-    });
-
-    var marginMin = document.getElementById("slider-margin-value-min");
-    var marginMax = document.getElementById("slider-margin-value-max");
-
-    noUiSlider1.noUiSlider.on("update", function (values, handle) {
-      if (handle) {
-        marginMax.innerHTML = values[handle];
-        console.log("Максимальный интервал" + marginMax.innerHTML);
-      } else {
-        marginMin.innerHTML = values[handle];
-        console.log("Минимальный интервал" + marginMin.innerHTML);
-      }
-    });
-  }
   //
+
+  var rangeSlider = function () {
+    var slider = $(".filter__itemRange"),
+      range = $('.filter__itemRange input[type="range"]'),
+      valueBox = $(".valueBox");
+    slider.each(function () {
+      valueBox.each(function () {
+        var value = $(this).next().attr("value");
+        $(this).html(value);
+      });
+      range.on("input", function () {
+        $(this).prev(valueBox).html(this.value);
+
+        //далее работа с значениями - функционал весь выше
+        //
+        // Выводит значение активного движка - показывая, что он задает - min или max
+        // var sIdx = $(this).attr("name");
+        // var sIdxVal = $(this).val();
+        // console.log(sIdx + "-" + sIdxVal);
+        //
+
+        var minInt = parseInt($('.filter__itemRange input[name = "min-id1"]').val());
+        var maxInt = parseInt($('.filter__itemRange input[name = "max-id1"]').val());
+        // .attr(attributeName, value);
+        console.log("Минимальный интервал" + minInt);
+        console.log("Максимальный интервал" + maxInt);
+
+        if (minInt >= maxInt) {
+          $('.filter__itemRange input[name = "min-id1"]').val(maxInt);
+        }
+
+        if (maxInt <= minInt) {
+          $('.filter__itemRange input[name = "max-id1"]').val(minInt);
+        }
+
+        // Задаем значение min и max - с очень смешным эффектом - но рабочим вариантом
+        // $('.filter__itemRange input[name = "min-id1"]').attr("max", maxInt);
+        // $('.filter__itemRange input[name = "max-id1"]').attr("min", minInt);
+        //
+      });
+    });
+  };
+  rangeSlider();
+
+  //
+  //
+  var noUiSlider1 = document.getElementById("noUiSlider1");
+
+  var marginMin = document.getElementById("slider-margin-value-min");
+  var marginMax = document.getElementById("slider-margin-value-max");
+
+  noUiSlider.create(noUiSlider1, {
+    start: [100, 800],
+    step: 1,
+    connect: true,
+    range: {
+      min: 0,
+      max: 1000,
+    },
+    //код ниже убирает дробные нули
+    format: {
+      from: function (value) {
+        return parseInt(value);
+      },
+      to: function (value) {
+        return parseInt(value);
+      },
+    },
+  });
+
+  var marginMin = document.getElementById("slider-margin-value-min");
+  var marginMax = document.getElementById("slider-margin-value-max");
+
+  noUiSlider1.noUiSlider.on("update", function (values, handle) {
+    if (handle) {
+      marginMax.innerHTML = values[handle];
+      console.log("Максимальный интервал" + marginMax.innerHTML);
+    } else {
+      marginMin.innerHTML = values[handle];
+      console.log("Минимальный интервал" + marginMin.innerHTML);
+    }
+  });
+  //
+  // var Rmin = $('input[name="min-id1"]');
+  // var Rmax = $('input[name="max-id1"]');
+
+  // - выводит в консоли все дивы с их классами
+  // $("div").each(function (index, value) {
+  //   console.log("div" + index + ":" + $(this).attr("class"));
+  // });
+  //
+
+  // var dubleRangeSlider = function () {
+  //   console.log("запуск функции dubleRangeSlider");
+  //   var dubleRangeSlider = $(".dubleRange");
+  //   dubleRangeSlider.each(function () {
+  //     var min = $(this).children(".dubleRangeMin").children('input[name="min-id1"]').attr("value");
+
+  //     console.log(min);
+  //   });
+  // };
+
+  // dubleRangeSlider();
 
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {
@@ -292,131 +365,4 @@ $(function () {
       },
     });
   }
-  if ($(".tovarPage__slider").length) {
-    var galleryThumbs = new Swiper(".gallery-thumbs", {
-      spaceBetween: 5,
-      loop: false,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
-    var galleryTop = new Swiper(".gallery-top", {
-      spaceBetween: 5,
-      slidesPerView: 2,
-      loop: false,
-      effect: "slide",
-      navigation: {
-        nextEl: ".swiper-button-next2",
-        prevEl: ".swiper-button-prev2",
-      },
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-    });
-    // if($(".gallery-top .swiper-slide2").length == 1) {
-    //   $('.swiper-pagination').addClass( "disabled" );
-    // }
-  }
-
-  if ($(".tovarPage__slider2").length) {
-    var galleryThumbs = new Swiper(".gallery-thumbs-v", {
-      spaceBetween: 5,
-      loop: false,
-      direction: "vertical",
-      //   effect: 'slide',
-      // slidesPerView: 4,
-      slidesPerView: 5,
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      autoHeight: false,
-    });
-    var galleryTop = new Swiper(".gallery-top-v", {
-      //   nextButton: '.swiper-button-next2',
-      //   prevButton: '.swiper-button-prev2',
-      spaceBetween: 5,
-      slidesPerView: 1,
-      loop: false,
-      effect: "slide",
-      navigation: {
-        nextEl: ".swiper-button-next2",
-        prevEl: ".swiper-button-prev2",
-      },
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-    });
-    // if($(".gallery-top .swiper-slide2").length == 1) {
-    //   $('.swiper-pagination').addClass( "disabled" );
-    // }
-  }
-
-  var number = $(".number");
-  number.each(function () {
-    $(".minus").click(function () {
-      var $input = $(this).parent().find("input");
-      var count = parseInt($input.val()) - 1;
-      count = count < 1 ? 1 : count;
-      $input.val(count);
-      $input.change();
-      return false;
-    });
-    $(".plus").click(function () {
-      var $input = $(this).parent().find("input");
-      $input.val(parseInt($input.val()) + 1);
-      $input.change();
-      return false;
-    });
-  });
-
-  $(".tovar__addToCart").on("click", function (e) {
-    e.preventDefault(); //при верстке ставить - в modx убирать, а то корзина не суммируется
-
-    if ($(".site__center").width() > 1024) {
-      var cart = $(".miniCart__area_desktop");
-    } else {
-      var cart = $(".miniCart__area_mobile");
-    }
-
-    var imgtodrag = $(this).closest(".tovarPage__top").find(".swiper-slide-active img");
-
-    console.log(cart.offset().top);
-
-    if (imgtodrag) {
-      var imgclone = imgtodrag
-        .clone()
-        .offset({
-          top: imgtodrag.offset().top,
-          left: imgtodrag.offset().left,
-        })
-        .css({
-          opacity: "0.5",
-          position: "absolute",
-          height: "400px",
-          width: "300px",
-          "z-index": "9999",
-        })
-        .appendTo($("body"))
-        .animate(
-          {
-            top: cart.offset().top + 10,
-            left: cart.offset().left + 10,
-            width: 75,
-            height: 75,
-          },
-          1000
-        );
-
-      imgclone.animate(
-        {
-          width: 0,
-          height: 0,
-        },
-        function () {
-          $(this).detach();
-        }
-      );
-    }
-  });
 });

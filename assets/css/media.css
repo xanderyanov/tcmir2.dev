@@ -83,6 +83,24 @@
     width: 33.333%;
     padding: 10px;
   }
+  .tovarPage__filter {
+    width: 80%;
+  }
+  .tovarPage__slider {
+    width: 60%;
+  }
+  .tovarPage__info {
+    width: 40%;
+  }
+  .tovarPage__filter {
+    width: 100%;
+  }
+  .tovarPage__infoVslider {
+    width: 50%;
+  }
+  .tovarPage__slider2Area {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 920px) {
@@ -236,6 +254,25 @@
     width: 33.333%;
     padding: 5px;
   }
+
+  .tovarPage__top {
+    flex-direction: column;
+  }
+  .tovarPage__slider {
+    width: 100%;
+    padding: 0 0 20px 0;
+  }
+  .tovarPage__info {
+    width: 100%;
+  }
+  .tovarPage__slider2Area {
+    width: 100%;
+    padding: 0 0 20px 0;
+  }
+  .tovarPage__slider2 {
+    height: 80vh;
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -283,6 +320,9 @@
   .filter__outer {
     width: 100%;
     padding: 10px;
+  }
+  .tovarPage__slider2 {
+    height: 60vh;
   }
 }
 
