@@ -42,6 +42,10 @@ h6 {
   margin-bottom: 20px;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .content p,
 .content ul,
 .content ol,

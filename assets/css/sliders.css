@@ -385,6 +385,7 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .swiper-slide2 img {
   display: block;
@@ -445,12 +446,12 @@
   opacity: 1;
 } */
 
-.swiper-button-prev2,
-.swiper-button-next2 {
+.swiper-button-prevV:hover,
+.swiper-button-nextV {
   background-color: #a6a6a6;
   background-image: none !important;
-  width: 20px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -459,27 +460,34 @@
   transition: all 0.3s;
 }
 
-.swiper-button-prev2 i,
-.swiper-button-next2 i {
+.swiper-button-prevV i,
+.swiper-button-nextV i {
   color: #fff;
   font-size: 1rem;
   transition: all 0.3s;
 }
 
-.swiper-button-prev2:hover,
-.swiper-button-next2:hover {
+.swiper-button-prevV:hover,
+.swiper-button-nextV:hover {
   background: #be3f46;
   background-image: none;
 }
 
-.swiper-button-prev2:hover i,
-.swiper-button-next2:hover i {
+.swiper-button-prevV:hover i,
+.swiper-button-nextV:hover i {
   color: #fff;
 }
 
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
-  opacity: 0;
+  opacity: 0.2;
+  pointer-events: visible;
+  background-color: #a6a6a6;
+}
+
+.swiper-button-next.swiper-button-disabled:hover,
+.swiper-button-prev.swiper-button-disabled:hover {
+  background-color: #a6a6a6;
 }
 
 .swiper-button-next:after,
