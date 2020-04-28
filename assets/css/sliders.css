@@ -231,8 +231,8 @@
 
 /* слайдер на странице товара */
 .tovarPage__slider {
-  width: 70%;
-  padding: 0 20px 0 0;
+  width: 60%;
+  padding: 0 20px 0 2px;
 }
 
 .swiper-container2 {
@@ -305,13 +305,13 @@
 .swiper-button-next2 {
   background-color: #a6a6a6;
   background-image: none !important;
-  width: 20px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 50%;
-  margin-top: -20px;
+  margin-top: -1.125rem;
   transition: all 0.3s;
 }
 
@@ -350,6 +350,7 @@
 /* 2222222222222 */
 
 /* слайдер на странице товара */
+
 .tovarPage__slider2 {
   width: 100%;
   padding: 0 20px 0 0;
@@ -357,6 +358,14 @@
   align-items: flex-start;
   height: 60vh;
 }
+
+/* .tovarPage__slider2Area > .tovarPage__slider2 {
+  width: 100%;
+  padding: 0 20px 0 0;
+  display: flex;
+  align-items: flex-start;
+  height: 80vh;
+} */
 
 .swiper-container2 {
   width: 100%;
@@ -390,7 +399,7 @@
 .swiper-slide2 img {
   display: block;
   max-height: 100%;
-  /* width: 100%; */
+  width: 100%;
 }
 
 .gallery-top {
@@ -400,6 +409,10 @@
 }
 .gallery-top-v {
   height: 100%;
+}
+
+.gallery-top-v img {
+  width: auto;
 }
 
 .gallery-thumbs {
@@ -446,7 +459,7 @@
   opacity: 1;
 } */
 
-.swiper-button-prevV:hover,
+.swiper-button-prevV,
 .swiper-button-nextV {
   background-color: #a6a6a6;
   background-image: none !important;
@@ -456,7 +469,7 @@
   justify-content: center;
   align-items: center;
   top: 50%;
-  margin-top: -20px;
+  margin-top: -1.125rem;
   transition: all 0.3s;
 }
 

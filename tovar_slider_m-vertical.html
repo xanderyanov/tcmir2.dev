@@ -28,7 +28,7 @@
 
   <meta name="format-detection" content="telephone=no" />
   <meta name="format-detection" content="address=no" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" /> 
 
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -551,9 +551,9 @@
                         </a>
                       </div>
                     </div>
-                    <div class="swiper-button-next swiper-button-next2"><i class="icon-arr-right1"></i>
+                    <div class="swiper-button-next swiper-button-nextV"><i class="icon-arr-right1"></i>
                     </div>
-                    <div class="swiper-button-prev swiper-button-prev2"><i class="icon-arr-left1"></i>
+                    <div class="swiper-button-prev swiper-button-prevV"><i class="icon-arr-left1"></i>
                     </div>
                   </div>
                   <div class="swiper-container gallery-thumbs gallery-thumbs-v">
@@ -592,7 +592,7 @@
                   </div>
                 </div>
               </div>
-              <div class="tovarPage__info tovarPage__info60 tovarPage__infoVslider">
+              <div class="tovarPage__info tovarPage__infoVslider">
                 <form class="" method="post">
                   <div class="title title_alignRight">
                     <h1>Название товара</h1>
@@ -602,97 +602,110 @@
                     Короткое описание товара в несоклько строчек Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa optio corporis voluptates ea expedita molestiae ipsam, est esse modi libero beatae perferendis omnis inventore provident pariatur veniam. Omnis, in sit.
                   </div>
 
-                  <div class="tovarPage__filterArea">
-                    <div class="tovarPage__filter">
-                      <div class="filter">
-                        <div class="filter__title">Выбор цвета:</div>
-                        <div class="filter__content  filter__checkboxColor">
-
-                          <div class="checkboxColor__item" title="Красный">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_ff0000" style="background: #ff0000;"></span>
-                          </div>
-                          <div class="checkboxColor__item" title="Оранжевый">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_FFA500" style="background: #FFA500;"></span>
-                          </div>
-                          <div class="checkboxColor__item" title="Желтый">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_ffff00" style="background: #ffff00;"></span>
-                          </div>
-                          <div class="checkboxColor__item" title="Зеленый">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_008000" style="background: #008000;"></span>
-                          </div>
-                          <div class="checkboxColor__item" title="Голубой">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_00bfff" style="background: #00bfff;"></span>
-                          </div>
-                          <div class="checkboxColor__item" title="Синий">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_0000FF" style="background: #0000FF;"></span>
-                          </div>
-                          <div class="checkboxColor__item" title="Фиолетовый">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_8b00ff" style="background: #8b00ff;"></span>
-                          </div>
-                          <div class="checkboxColor__item" title="Белый">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_ffffff" style="background: #ffffff;"></span>
-                          </div>
-                          <div class="checkboxColor__item" title="Черный">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_000000" style="background: #000000;"></span>
-                          </div>
-                          <div class="checkboxColor__item" title="Серый">
-                            <input type="checkbox" class="checkboxColor">
-                            <span class="checkboxColorBox checkboxColorBox_808080" style="background: #808080;"></span>
-                          </div>
-                          
-                        </div>
-                        <div class="filter__checkboxColorReset">Сбросить фильтр</div>
-                      </div>
-                    
-                    </div>
                   <div class="tovarPage__filter">
                     <div class="filter">
-                      <div class="filter__title">Заголовок фильтра:</div>
-                      <div class="filter__content filter__content_radio1">
-                        
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                      <div class="filter__title">Мои чекбоксы:</div>
+                      <div class="filter__content">
+                        <div class="xcheckbox">
+                          <input type="checkbox" id="checkbox_1" value="1">
+                          <label for="checkbox_1">Пункт 1</label>
                         </div>
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+                        <div class="xcheckbox">
+                          <input type="checkbox" id="checkbox_2" value="2">
+                          <label for="checkbox_2">Пункт 2</label>
                         </div>
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio3">Toggle this custom radio</label>
+                        <div class="xcheckbox">
+                          <input type="checkbox" id="checkbox_3" value="3">
+                          <label for="checkbox_3">Вариант 3, состоящий из длинного названия</label>
                         </div>
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio4">Or toggle this other custom radio</label>
+                        <div class="xcheckbox">
+                          <input type="checkbox" id="checkbox_4" value="4">
+                          <label for="checkbox_4">Вариант четыре</label>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="tovarPage__filter">
                     <div class="filter">
-                      <div class="filter__title">Укажите нужный размер:</div>
-                      <div class="filter__content ">
-                        <div class="filter__item filter__item_100">
-                          <select class="custom-select">
+                      <div class="filter__title">Мои радиокнопки:</div>
+                      <div class="filter__content">
+                        <div class="xradio">
+                          <input type="radio" id="radio_1" value="1" name="pagetitle">
+                          <label for="radio_1">Пункт 1</label>
+                        </div>
+                        <div class="xradio">
+                          <input type="radio" id="radio_2" value="1" name="pagetitle">
+                          <label for="radio_2">Пункт 1</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tovarPage__filter">
+                    <div class="filter">
+                      <div class="filter__title">Мой выпадающий список:</div>
+                      <div class="filter__content">
+                        <div class="xselect__outer">
+                          <select class="xselect">
                             <option selected disabled>Выберите один из вариантов</option>
                             <option value="1">Первый вариант</option>
                             <option value="2">Второй вариант</option>
                             <option value="3">Тритий вариант</option>
                           </select>
+                          <a class="xselect__btn"></a>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div class="tovarPage__filter">
+                    <div class="filter">
+                      <div class="filter__title">Выбор цвета:</div>
+                      <div class="filter__content  filter__checkboxColor">
+    
+                        <div class="checkboxColor__item" title="Красный">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_ff0000" style="background: #ff0000;"></span>
+                        </div>
+                        <div class="checkboxColor__item" title="Оранжевый">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_FFA500" style="background: #FFA500;"></span>
+                        </div>
+                        <div class="checkboxColor__item" title="Желтый">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_ffff00" style="background: #ffff00;"></span>
+                        </div>
+                        <div class="checkboxColor__item" title="Зеленый">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_008000" style="background: #008000;"></span>
+                        </div>
+                        <div class="checkboxColor__item" title="Голубой">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_00bfff" style="background: #00bfff;"></span>
+                        </div>
+                        <div class="checkboxColor__item" title="Синий">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_0000FF" style="background: #0000FF;"></span>
+                        </div>
+                        <div class="checkboxColor__item" title="Фиолетовый">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_8b00ff" style="background: #8b00ff;"></span>
+                        </div>
+                        <div class="checkboxColor__item" title="Белый">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_ffffff" style="background: #ffffff;"></span>
+                        </div>
+                        <div class="checkboxColor__item" title="Черный">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_000000" style="background: #000000;"></span>
+                        </div>
+                        <div class="checkboxColor__item" title="Серый">
+                          <input type="checkbox" class="checkboxColor">
+                          <span class="checkboxColorBox checkboxColorBox_808080" style="background: #808080;"></span>
+                        </div>
+                        
+                      </div>
+                      <div class="filter__checkboxColorReset">Очистить выбор</div>
+                    </div>
+                  
                   </div>
 
                   <div class="tovar__priceArea">

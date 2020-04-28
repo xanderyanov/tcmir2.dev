@@ -109,7 +109,6 @@
 .xradio input[type="radio"] + label::after {
   content: none;
 }
-/*Показываем галку по состоянию checked*/
 .xradio input[type="radio"]:checked + label::after {
   content: "";
 }
@@ -128,6 +127,7 @@
   align-items: center;
   position: relative;
   background: #eee;
+  margin-bottom: 5px;
 }
 .xselect {
   width: 100%;

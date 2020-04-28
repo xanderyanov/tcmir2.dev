@@ -303,7 +303,7 @@ $(function () {
     });
     var galleryTop = new Swiper(".gallery-top", {
       spaceBetween: 5,
-      slidesPerView: 2,
+      slidesPerView: 1,
       loop: false,
       effect: "slide",
       navigation: {
@@ -320,12 +320,12 @@ $(function () {
   }
 
   if ($(".tovarPage__slider2").length) {
-    if ($(".gallery-top-v .swiper-slide2").length == 1) {
-      $(".swiper-pagination").addClass("disabled");
-      $(".swiper-button-nextV").hide();
-      $(".swiper-button-prevV").hide();
-      $(".gallery-thumbs-v").hide();
-    }
+    // if ($(".gallery-top-v .swiper-slide2").length == 1) {
+    //   $(".swiper-pagination").addClass("disabled");
+    //   $(".swiper-button-nextV").hide();
+    //   $(".swiper-button-prevV").hide();
+    //   $(".gallery-thumbs-v").hide();
+    // }
 
     var galleryThumbs = new Swiper(".gallery-thumbs-v", {
       spaceBetween: 5,
@@ -342,7 +342,7 @@ $(function () {
     var galleryTop = new Swiper(".gallery-top-v", {
       //   nextButton: '.swiper-button-next2',
       //   prevButton: '.swiper-button-prev2',
-      spaceBetween: 5,
+      spaceBetween: 0,
       slidesPerView: 1,
       loop: false,
       effect: "slide",

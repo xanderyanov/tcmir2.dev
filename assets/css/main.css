@@ -1509,13 +1509,17 @@ body {
 }
 
 .tovarPage__info {
-  width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
 }
 
 .tovarPage__info60 {
   width: 60%;
+}
+
+.tovarPage__infoVslider {
+  width: 50%;
 }
 
 .title_alignRight {
@@ -1643,7 +1647,7 @@ body {
 }
 
 .tovarPage__slider2Area {
-  width: 40%;
+  width: 50%;
 }
 
 .filter__checkboxColor {
