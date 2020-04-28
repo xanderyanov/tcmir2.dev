@@ -1,0 +1,169 @@
+.xcheckbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3125rem;
+}
+
+.xcheckbox input[type="checkbox"] {
+  display: none;
+}
+
+.xcheckbox label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.3;
+  padding: 0 0 0 25px;
+  cursor: pointer;
+}
+
+.xcheckbox label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #f76060;
+  border-radius: 2px;
+  box-shadow: inset 0px 0px 3px 0px #f76060;
+}
+
+.xcheckbox label::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 8px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  color: #ff4141;
+}
+
+.xcheckbox input[type="checkbox"] + label::after {
+  content: none;
+}
+/*Показываем галку по состоянию checked*/
+.xcheckbox input[type="checkbox"]:checked + label::after {
+  content: "";
+}
+
+.xcheckbox input[type="checkbox"]:checked + label {
+  color: #ff4141;
+}
+
+/*  */
+
+.xradio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3125rem;
+}
+
+.xradio input[type="radio"] {
+  display: none;
+}
+
+.xradio label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.3;
+  padding: 0 0 0 25px;
+  cursor: pointer;
+}
+
+.xradio label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #f76060;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 3px 0px #f76060;
+}
+
+.xradio label::after {
+  content: "";
+  display: block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  background: #f76060;
+}
+
+.xradio input[type="radio"] + label::after {
+  content: none;
+}
+/*Показываем галку по состоянию checked*/
+.xradio input[type="radio"]:checked + label::after {
+  content: "";
+}
+
+.xradio input[type="radio"]:checked + label {
+  color: #ff4141;
+}
+
+/*  */
+.xselect__outer {
+  width: 100%;
+  border: #ccc 1px solid;
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #eee;
+}
+.xselect {
+  width: 100%;
+  border: none;
+  height: 2rem;
+  line-height: 2rem;
+  position: relative;
+  background: none;
+  z-index: 100;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 1.5rem 0 0.3125rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.xselect__btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  /* background: #eee; */
+  height: 2rem;
+  width: 2rem;
+  z-index: 50;
+}
+
+.xselect__btn:after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.75rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.5rem 0.5rem 0 0.5rem;
+  border-color: #f76060 transparent transparent transparent;
+}

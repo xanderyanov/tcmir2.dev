@@ -492,7 +492,7 @@
       <div class="xBlock w1">
 
         <div class="title">
-          <h1>Каталог по параметрам</h1>
+          <h1>Каталог с фильтрацией по параметрам</h1>
         </div>
 
         <div class="filterBox__area">
@@ -500,68 +500,63 @@
             <form action="#" class="filterForm">
               <div class="filter__outer">
                 <div class="filter">
-                  <div class="filter__title">Заголовок фильтра:</div>
-                  <div class="filter__content filter__content_checkbox1">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck1">
-                      <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                  <div class="filter__title">Мои чекбоксы:</div>
+                  <div class="filter__content">
+                    <div class="xcheckbox">
+                      <input type="checkbox" id="checkbox_1" value="1">
+                      <label for="checkbox_1">Пункт 1</label>
                     </div>
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck2">
-                      <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+                    <div class="xcheckbox">
+                      <input type="checkbox" id="checkbox_2" value="2">
+                      <label for="checkbox_2">Пункт 2</label>
                     </div>
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck3">
-                      <label class="custom-control-label" for="customCheck3">Check this custom checkbox</label>
+                    <div class="xcheckbox">
+                      <input type="checkbox" id="checkbox_3" value="3">
+                      <label for="checkbox_3">Вариант 3, состоящий из длинного названия</label>
                     </div>
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck4">
-                      <label class="custom-control-label" for="customCheck4">Check this custom checkbox</label>
+                    <div class="xcheckbox">
+                      <input type="checkbox" id="checkbox_4" value="4">
+                      <label for="checkbox_4">Вариант четыре</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter__outer">
+                <div class="filter">
+                  <div class="filter__title">Мои радиокнопки:</div>
+                  <div class="filter__content">
+                    <div class="xradio">
+                      <input type="radio" id="radio_1" value="1" name="pagetitle">
+                      <label for="radio_1">Пункт 1</label>
+                    </div>
+
+                    <div class="xradio">
+                      <input type="radio" id="radio_2" value="1" name="pagetitle">
+                      <label for="radio_2">Пункт 1</label>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="filter__outer">
+                <div class="filter">
+                  <div class="filter__title">Мой выпадающий список:</div>
+                  <div class="filter__content">
+                    <div class="xselect__outer">
+                      <select class="xselect">
+                        <option selected disabled>Выберите один из вариантов</option>
+                        <option value="1">Первый вариант</option>
+                        <option value="2">Второй вариант</option>
+                        <option value="3">Тритий вариант</option>
+                      </select>
+                      <a class="xselect__btn"></a>
                     </div>
 
                     
                   </div>
                 </div>
               </div>
-              <div class="filter__outer">
-                <div class="filter">
-                  <div class="filter__title">Заголовок фильтра:</div>
-                  <div class="filter__content filter__content_radio1">
-                    
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                      <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                      <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                      <label class="custom-control-label" for="customRadio3">Toggle this custom radio</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                      <label class="custom-control-label" for="customRadio4">Or toggle this other custom radio</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filter__outer">
-                <div class="filter">
-                  <div class="filter__title">Заголовок фильтра:</div>
-                  <div class="filter__content ">
-                    <div class="filter__item filter__item_100">
-                      <select class="custom-select">
-                        <option selected disabled>Выберите один из вариантов</option>
-                        <option value="1">Первый вариант</option>
-                        <option value="2">Второй вариант</option>
-                        <option value="3">Тритий вариант</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
               <div class="filter__outer">
                 <div class="filter">
                   <div class="filter__title">Выбор цвета:</div>
@@ -609,7 +604,7 @@
                     </div>
                     
                   </div>
-                  <div class="filter__checkboxColorReset">Сбросить фильтр</div>
+                  <div class="filter__checkboxColorReset">Очистить выбор</div>
                 </div>
               
               </div>
@@ -636,6 +631,9 @@
         </div>
 
         <div class="tagsBox__area">
+          <div class="title">
+            <h2>Теги</h2>
+          </div>
           <div class="tagsBox">
             <div class="tagsItem tagsItem_active">Женщинам</div>
             <div class="tagsItem tagsItem_disable">Мужчинам</div>
