@@ -426,8 +426,16 @@ body {
   color: var(--tColor);
 }
 
-.hide {
+i.linkFavOff {
+  display: block;
+}
+i.linkFavOn {
   display: none;
+  color: var(--redFillhover);
+}
+
+.hide {
+  /* display: none; */
 }
 
 .miniCart__area {
@@ -676,6 +684,7 @@ body {
 
 .tovarCard__fav i.icon-favorit2 {
   color: var(--redFill);
+  display: none;
 }
 
 .tovarCard__fav:hover i {
