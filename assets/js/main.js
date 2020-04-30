@@ -464,67 +464,6 @@ $(function () {
   //
   //
   // Скрипт добавления в избранное через localstorage
-  // if ($(".category").length) {
-  //   var tovarIdCard = $(".tovarCard__area");
-  //   var tovarIdCardTotal = tovarIdCard.length;
-
-  //   var tovarObj = {
-  //     tovarId: 1,
-  //     fav: 0,
-  //   };
-
-  // $(".tovarCard__fav").click(function (e) {
-  //   e.preventDefault();
-
-  //   if ($(this).hasClass("inFav")) {
-  //     $(this).removeClass("inFav");
-  //     $(this).children(".icon-favorit1").show();
-  //     $(this).children(".icon-favorit2").hide();
-  //   } else {
-  //     $(this).addClass("inFav");
-  //     $(this).children(".icon-favorit1").hide();
-  //     $(this).children(".icon-favorit2").show();
-
-  //     localStorage.setItem(tovarId, "noFav");
-  //   }
-  // });
-
-  // console.log(tovarIdCardTotal);
-  // for (i = 1; i < tovarIdCardTotal; i++) {
-  //   console.log(tovarIdCard.attr("name"));
-  // }
-
-  // tovarIdCard.each(function (index, element) {
-  //   console.log("id:", $(element).attr("name"));
-  // });
-
-  // простая работа с localstorage - запись всех элементов
-  // tovarIdCard.each(function (index, element) {
-  //   var tovarId = $(element).attr("name");
-  //   console.log();
-  //   localStorage.setItem(tovarId, "noFav");
-  // });
-
-  //создадим объект
-  //   var tovarObj = {
-  //     tovarId: 1,
-  //     fav: 0,
-  //   };
-  //   console.log(tovarObj);
-  //   var serialObj = JSON.stringify(tovarObj); //сериализуем его
-  //   console.log(serialObj);
-  //   localStorage.setItem("myKey", serialObj); //запишем его в хранилище по ключу "myKey"
-
-  //   var returnObj = JSON.parse(localStorage.getItem("myKey")); //спарсим его обратно объект
-  //   console.log(returnObj);
-  // }
-
-  // var favorites = array();
-
-  // var favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-  // var favorites = array();
-  // var favorites = [];
   var favorites = JSON.parse(localStorage.getItem("myFavorites")) || [];
   if (favorites.length) {
     console.log("есть записи");
@@ -546,13 +485,13 @@ $(function () {
         .children(".favOn")
         .show();
 
-      $(".topFavBtn").css({ cursor: "pointer" }).addClass("favLinkReady");
+      $(".topFavBtn").addClass("favLinkReady");
     });
   } else {
     console.log("нет записей");
     $(".linkFavOff").show();
     $(".linkFavOn").hide();
-    $(".topFavBtn").css({ cursor: "auto" }).removeClass("favLinkReady");
+    $(".topFavBtn").removeClass("favLinkReady");
   }
   $(".tovarCard__fav").on("click", function (e) {
     e.preventDefault();
@@ -584,13 +523,15 @@ $(function () {
     if (favorites.length) {
       $(".linkFavOff").hide();
       $(".linkFavOn").show();
-      $(".topFavBtn").css({ cursor: "pointer" }).addClass("favLinkReady");
+      $(".topFavBtn").addClass("favLinkReady");
     } else {
       $(".linkFavOff").show();
       $(".linkFavOn").hide();
-      $(".topFavBtn").css({ cursor: "auto" }).removeClass("favLinkReady");
+      $(".topFavBtn").removeClass("favLinkReady");
     }
   });
-});
 
-// fruits.push("Kiwi");
+  // $(".linkFavOn").click(function () {
+  //   console.log("переход на страницу избранного");
+  // });
+});

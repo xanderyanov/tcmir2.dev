@@ -419,11 +419,24 @@ body {
   justify-content: center;
   background: var(--colorLightGrey);
   text-decoration: none;
+  position: relative;
 }
+/* .topFavBtn:after {
+  position: absolute;
+  content: "";
+  width: 102%;
+  height: 102%;
+  left: -1%;
+  height: -1%;
+} */
 
 .topFavBtn i {
   font-size: 1.5rem;
   color: var(--tColor);
+}
+
+.favLinkReady {
+  cursor: pointer;
 }
 
 i.linkFavOff {
