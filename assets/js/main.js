@@ -545,11 +545,14 @@ $(function () {
         .find(".tovarCard__fav")
         .children(".favOn")
         .show();
+
+      $(".topFavBtn").css({ cursor: "pointer" }).addClass("favLinkReady");
     });
   } else {
     console.log("нет записей");
     $(".linkFavOff").show();
     $(".linkFavOn").hide();
+    $(".topFavBtn").css({ cursor: "auto" }).removeClass("favLinkReady");
   }
   $(".tovarCard__fav").on("click", function (e) {
     e.preventDefault();
@@ -581,9 +584,11 @@ $(function () {
     if (favorites.length) {
       $(".linkFavOff").hide();
       $(".linkFavOn").show();
+      $(".topFavBtn").css({ cursor: "pointer" }).addClass("favLinkReady");
     } else {
       $(".linkFavOff").show();
       $(".linkFavOn").hide();
+      $(".topFavBtn").css({ cursor: "auto" }).removeClass("favLinkReady");
     }
   });
 });
