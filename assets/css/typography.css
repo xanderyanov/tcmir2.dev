@@ -175,3 +175,12 @@ table.clear td {
 .table_outer table {
   min-width: 500px;
 }
+
+.table_outer250 {
+  max-width: 100%;
+  overflow: auto;
+  margin-bottom: 1.25rem;
+}
+.table_outer250 table {
+  min-width: 250px;
+}

@@ -398,7 +398,57 @@ $(function () {
 
     var imgtodrag = $(this).closest(".tovarPage__top").find(".swiper-slide-active img");
 
-    console.log(cart.offset().top);
+    // console.log(cart.offset().top);
+
+    if (imgtodrag) {
+      var imgclone = imgtodrag
+        .clone()
+        .offset({
+          top: imgtodrag.offset().top,
+          left: imgtodrag.offset().left,
+        })
+        .css({
+          opacity: "0.5",
+          position: "absolute",
+          height: "400px",
+          width: "300px",
+          "z-index": "9999",
+        })
+        .appendTo($("body"))
+        .animate(
+          {
+            top: cart.offset().top + 10,
+            left: cart.offset().left + 10,
+            width: 75,
+            height: 75,
+          },
+          1000
+        );
+
+      imgclone.animate(
+        {
+          width: 0,
+          height: 0,
+        },
+        function () {
+          $(this).detach();
+        }
+      );
+    }
+  });
+
+  $(".tovarCard__buy").on("click", function (e) {
+    e.preventDefault(); //при верстке ставить - в modx убирать, а то корзина не суммируется
+
+    if ($(".site__center").width() > 1024) {
+      var cart = $(".miniCart__area_desktop");
+    } else {
+      var cart = $(".miniCart__area_mobile");
+    }
+
+    var imgtodrag = $(this).closest(".tovarCard__area").find(".tovarCard__img img");
+
+    // console.log(cart.offset().top);
 
     if (imgtodrag) {
       var imgclone = imgtodrag
@@ -467,8 +517,8 @@ $(function () {
   var favorites = JSON.parse(localStorage.getItem("myFavorites")) || [];
   if (favorites.length) {
     console.log("есть записи");
-    $(".linkFavOff").hide();
-    $(".linkFavOn").show();
+    $(".topFavBtn_notFav").hide();
+    $(".topFavBtn_yesFav").css("display", "flex");
     // console.log(favorites);
     favorites.forEach(function (entry) {
       // console.log(entry);
@@ -489,9 +539,6 @@ $(function () {
     });
   } else {
     console.log("нет записей");
-    $(".linkFavOff").show();
-    $(".linkFavOn").hide();
-    $(".topFavBtn").removeClass("favLinkReady");
   }
   $(".tovarCard__fav").on("click", function (e) {
     e.preventDefault();
@@ -521,17 +568,17 @@ $(function () {
     localStorage.setItem("myFavorites", serialFavorites);
 
     if (favorites.length) {
-      $(".linkFavOff").hide();
-      $(".linkFavOn").show();
-      $(".topFavBtn").addClass("favLinkReady");
+      $(".topFavBtn_notFav").hide();
+      $(".topFavBtn_yesFav").css("display", "flex");
     } else {
-      $(".linkFavOff").show();
-      $(".linkFavOn").hide();
-      $(".topFavBtn").removeClass("favLinkReady");
+      $(".topFavBtn_notFav").css("display", "flex");
+      $(".topFavBtn_yesFav").hide();
     }
   });
 
-  // $(".linkFavOn").click(function () {
-  //   console.log("переход на страницу избранного");
-  // });
+  $(".topFavBtn_yesFav").click(function () {
+    console.log("переход на страницу избранного");
+    console.log(favorites);
+    // $(location).attr("href", "file:///D:/OSPanel/domains/tcmir2.dev/category/1");
+  });
 });

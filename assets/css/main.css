@@ -410,6 +410,11 @@ body {
   color: #fff;
 }
 
+.topFavBtn__area {
+  position: relative;
+  margin-right: 0.625rem;
+}
+
 .topFavBtn {
   display: flex;
   height: 3.125rem;
@@ -432,23 +437,14 @@ body {
 
 .topFavBtn i {
   font-size: 1.5rem;
-  color: var(--tColor);
-}
-
-.favLinkReady {
-  cursor: pointer;
-}
-
-i.linkFavOff {
-  display: block;
-}
-i.linkFavOn {
-  display: none;
   color: var(--redFillhover);
 }
 
-.hide {
-  /* display: none; */
+.topFavBtn_notFav {
+}
+.topFavBtn_yesFav {
+  display: none;
+  cursor: pointer;
 }
 
 .miniCart__area {
@@ -1985,4 +1981,36 @@ span.orderCart__totalTitle {
 
 .orderForm__orderBtn span {
   font-size: 1.75rem;
+}
+
+.tovarDescTab__area {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.miniTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--tColor);
+  margin-bottom: 10px;
+}
+
+.tovarDescTab__area table {
+  width: 100%;
+  border-bottom: 2px solid var(--colorLightGrey);
+}
+
+.tovarDescTab__area table td {
+  padding: 10px;
+}
+
+.tovarDescTab__area table tr:nth-child(odd) td {
+  background: var(--colorLightGrey);
+}
+
+.tovarDescTab__area table tr:first-child td {
+  background: var(--redFill);
+  color: #fff;
 }
