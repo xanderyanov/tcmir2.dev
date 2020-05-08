@@ -1,0 +1,52 @@
+.sliderImgBtnPrev,
+.sliderImgBtnNext {
+  background-color: #a6a6a6;
+  background-image: none !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  margin-top: -1.125rem;
+  transition: all 0.3s;
+}
+
+.sliderImgBtnPrev i,
+.sliderImgBtnNext i {
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.sliderImgBtnPrev:hover,
+.sliderImgBtnNext:hover {
+  background: #be3f46;
+  background-image: none;
+}
+
+.sliderImgBtnPrev:hover i,
+.sliderImgBtnNext:hover i {
+  color: #fff;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.2;
+  pointer-events: visible;
+  background-color: #a6a6a6;
+}
+
+.swiper-button-next.swiper-button-disabled:hover,
+.swiper-button-prev.swiper-button-disabled:hover {
+  background-color: #a6a6a6;
+}
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  content: "";
+}
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  content: "";
+}

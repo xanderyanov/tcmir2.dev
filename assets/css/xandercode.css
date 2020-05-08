@@ -6,7 +6,8 @@
   --colorDarkGrey: #6b6b6b;
   --color1: rgba(65, 51, 40, 0.6);
   --color2: rgba(65, 51, 40, 0.8);
-  --redFill: #f76060;
+  /* --redFill: #f76060; */
+  --redFill: #ff4141;
   --redFillhover: #ff4141;
   --tColor: #413328;
 }

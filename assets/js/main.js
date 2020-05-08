@@ -160,7 +160,7 @@ $(function () {
     });
   }
   //
-
+  // главный слайдер на главной
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {
       slidesPerView: 1,
@@ -206,6 +206,7 @@ $(function () {
       },
     });
   }
+  // первая каруселька товаров на главной
   if ($(".carousel__container1").length) {
     var carousel = new Swiper(".carousel__container1", {
       slidesPerView: 1,
@@ -249,6 +250,7 @@ $(function () {
       },
     });
   }
+  // вторая каруселька товаров на главной
   if ($(".carousel__container2").length) {
     var carousel = new Swiper(".carousel__container2", {
       slidesPerView: 1,
@@ -292,8 +294,66 @@ $(function () {
       },
     });
   }
-  if ($(".tovarPage__slider").length) {
-    var galleryThumbs = new Swiper(".gallery-thumbs", {
+  if ($(".slider__new").length) {
+    // if ($(".gallery-top-v .swiper-slide2").length == 1) {
+    //   $(".swiper-pagination").addClass("disabled");
+    //   $(".swiper-button-nextV").hide();
+    //   $(".swiper-button-prevV").hide();
+    //   $(".gallery-thumbs-v").hide();
+    // }
+
+    var galleryThumbs = new Swiper(".slider__newThumbs", {
+      spaceBetween: 5,
+      loop: false,
+      direction: "vertical",
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is >= 320px
+        1: {
+          direction: "horizontal",
+          autoHeight: true,
+        },
+        // when window width is >= 480px
+        321: {
+          direction: "vertical",
+          autoHeight: false,
+        },
+      },
+      slidesPerView: 5,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: false,
+      autoHeight: false,
+    });
+    var galleryTop = new Swiper(".slider__newContent", {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      loop: false,
+      effect: "slide",
+      autoHeight: false,
+      navigation: {
+        nextEl: ".sliderImgBtnNext",
+        prevEl: ".sliderImgBtnPrev",
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        1: {
+          autoHeight: true,
+        },
+        // when window width is >= 480px
+        321: {
+          autoHeight: false,
+        },
+      },
+      setWrapperSize: true,
+    });
+  }
+
+  if ($(".tovarPage__HTslider").length) {
+    var galleryThumbs = new Swiper(".gallery-thumbs-ht", {
       spaceBetween: 5,
       loop: false,
       slidesPerView: 4,
@@ -301,7 +361,7 @@ $(function () {
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
     });
-    var galleryTop = new Swiper(".gallery-top", {
+    var galleryTop = new Swiper(".gallery-top-ht", {
       spaceBetween: 5,
       slidesPerView: 1,
       loop: false,
@@ -317,39 +377,6 @@ $(function () {
     // if($(".gallery-top .swiper-slide2").length == 1) {
     //   $('.swiper-pagination').addClass( "disabled" );
     // }
-  }
-
-  if ($(".tovarPage__slider2").length) {
-    // if ($(".gallery-top-v .swiper-slide2").length == 1) {
-    //   $(".swiper-pagination").addClass("disabled");
-    //   $(".swiper-button-nextV").hide();
-    //   $(".swiper-button-prevV").hide();
-    //   $(".gallery-thumbs-v").hide();
-    // }
-
-    var galleryThumbs = new Swiper(".gallery-thumbs-v", {
-      spaceBetween: 5,
-      loop: false,
-      direction: "vertical",
-      slidesPerView: 5,
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      autoHeight: false,
-    });
-    var galleryTop = new Swiper(".gallery-top-v", {
-      spaceBetween: 0,
-      slidesPerView: 1,
-      loop: false,
-      effect: "slide",
-      navigation: {
-        nextEl: ".swiper-button-nextV",
-        prevEl: ".swiper-button-prevV",
-      },
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-    });
   }
 
   // var number = $(".number");
@@ -578,7 +605,9 @@ $(function () {
 
   $(".topFavBtn_yesFav").click(function () {
     console.log("переход на страницу избранного");
-    console.log(favorites);
-    // $(location).attr("href", "file:///D:/OSPanel/domains/tcmir2.dev/category/1");
+    var parameters = favorites.join();
+    // console.log(favorites);
+    console.log(parameters);
+    $(location).attr("href", "http://mir.deltal.beget.tech/category.html/" + parameters);
   });
 });

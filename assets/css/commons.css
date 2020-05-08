@@ -324,7 +324,7 @@
 }
 
 .breadcrumbs__area {
-  padding: 20px 0 20px;
+  padding: 10px 0 10px;
 }
 .breadcrumbs {
   display: block;
@@ -334,7 +334,7 @@
   align-items: center;
   flex-wrap: wrap;
   color: #000;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -346,7 +346,7 @@
 }
 .breadcrumbs div a {
   color: #000;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 300;
   line-height: 1.2;
   text-decoration: none;
@@ -359,7 +359,7 @@
 
 .breadcrumbs div span {
   color: var(--redFillhover);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;

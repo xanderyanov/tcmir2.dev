@@ -14,7 +14,10 @@
 @import "fonts.css";
 @import "commons.css";
 @import "forms.css";
-@import "sliders.css";
+@import "sliders-main.css";
+@import "sliders-carusel.css";
+@import "sliders-new.css";
+@import "sliders-allstyle.css";
 @import "typography.css";
 
 @import "xandercode.css";
