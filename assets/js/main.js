@@ -414,6 +414,21 @@ $(function () {
     return false;
   });
 
+  $(".minus_tab").click(function () {
+    var $input = $(this).parent().find("input");
+    var count = parseInt($input.val()) - 1;
+    count = count < 0 ? 0 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+  $(".plus_tab").click(function () {
+    var $input = $(this).parent().find("input");
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
+  });
+
   $(".tovar__addToCart").on("click", function (e) {
     e.preventDefault(); //при верстке ставить - в modx убирать, а то корзина не суммируется
 

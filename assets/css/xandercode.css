@@ -39,3 +39,11 @@
 a.hover {
   text-decoration: none !important;
 }
+
+.hiden_600 {
+  display: block;
+}
+
+.visible_600 {
+  display: none;
+}
