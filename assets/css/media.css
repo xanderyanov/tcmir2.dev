@@ -442,11 +442,11 @@
   .slider__newThumbs > .swiper-wrapper > .swiper-slide {
     height: 20%;
   } */
-  .hiden_600 {
+  .hide_600 {
     display: none;
   }
 
-  .visible_600 {
+  .show_600 {
     display: block;
   }
 
@@ -586,7 +586,7 @@
 
   .tovarPage__info {
     width: 100%;
-    padding: 0;
+    padding: 10px 0 0 0;
     margin-bottom: 20px;
   }
 }

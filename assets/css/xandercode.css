@@ -40,10 +40,11 @@ a.hover {
   text-decoration: none !important;
 }
 
-.hiden_600 {
+.hide_600 {
   display: block;
+  display: inline-block;
 }
 
-.visible_600 {
+.show_600 {
   display: none;
 }

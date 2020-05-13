@@ -721,6 +721,7 @@ body {
 .tovarCard__icons_inPage {
   position: relative;
   justify-content: flex-end;
+  margin-bottom: 1.25rem;
 }
 
 .tovarCard__icon {
@@ -2110,7 +2111,6 @@ span.orderCart__totalTitle {
 .tovarDescTab__area {
   position: relative;
   width: 100%;
-  padding: 20px 0;
   margin-bottom: 20px;
 }
 
@@ -2215,7 +2215,4 @@ span.orderCart__totalTitle {
 
 .addToCartTab table tr td:first-child > div {
   border-left: none;
-}
-
-.hiden_xs {
 }
