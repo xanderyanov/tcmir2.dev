@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<div data-wareid="@Model" data-mode="qcont" class="number number_inTab">
+  <button
+    class="tbl-control tbl-minusbutton minus_tab"
+    data-wareid="@Model"
+    data-change="-1"
+    title="@LC(MLText.Decrease)"
+  >
+    @*<img src="~/img/elements/DecCart16.svg" />*@</button
+  >@* *@
+  <div class="tbl-orderqty-container">
+    <span class="tbl-control tbl-plusbuttonV" data-wareid="@Model" data-change="1" title="@LC(MLText.Increase)"></span
+    >@* *@<input class="tbl-orderqty cartCountInput" min="0" type="text" data-wareid="@Model" />@* *@<span
+      class="tbl-control tbl-minusbuttonV"
+      data-wareid="@Model"
+      data-change="-1"
+      title="@LC(MLText.Decrease)"
+    ></span>
+  </div>
+  @* *@<button
+    class="tbl-control tbl-plusbutton plus_tab"
+    data-wareid="@Model"
+    data-change="1"
+    title="@LC(MLText.Increase)"
+  >
+    @*<img src="~/img/elements/IncCart16.svg" />*@
+  </button>
+</div>

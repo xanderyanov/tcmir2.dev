@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30"
+   height="30"
+   viewBox="0 0 30 30"
+   version="1.1"
+   id="svg4018"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="BlueCart.svg">
+  <defs
+     id="defs4012" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8.0000004"
+     inkscape:cx="6.9149405"
+     inkscape:cy="9.5902775"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1097"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata4015">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-11.390361,-1.3437355)">
+    <g
+       id="g3410"
+       transform="matrix(0.35277777,0,0,-0.35277777,14.212761,30.509064)" />
+    <g
+       id="g821"
+       transform="matrix(1.0076612,0,0,1.0076612,-0.0872633,-0.24012917)">
+      <g
+         transform="matrix(1.3376718,0,0,-1.3376718,8.3805994,5.0832118)"
+         id="g3398">
+        <path
+           sodipodi:nodetypes="cccccccccc"
+           inkscape:connector-curvature="0"
+           id="path3400"
+           style="fill:#2b71b8;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 2.25,2.6250001 v -1.329 H 4.7963125 L 7.926,-4.341 8.917998,-12.756995 H 22.991293 L 24.106741,-3.2819719 8.743,-3.282 5.466,2.6250001 Z" />
+      </g>
+      <path
+         d="m 22.09241,28.178805 c 0,1.745662 1.420608,3.164931 3.166269,3.164931 1.745662,0 3.164931,-1.419269 3.164931,-3.164931 0,-1.747 -1.419269,-3.166269 -3.164931,-3.166269 -1.745661,0 -3.166269,1.419269 -3.166269,3.166269 m 1.313595,0 v 0"
+         style="fill:#2b71b8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33767188"
+         id="path3412"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 31.028158,28.178805 c 0,1.745662 1.420608,3.164931 3.16627,3.164931 1.745661,0 3.16493,-1.419269 3.16493,-3.164931 0,-1.747 -1.419269,-3.166269 -3.16493,-3.166269 -1.745662,0 -3.16627,1.419269 -3.16627,3.166269 m 1.313595,0 v 0"
+         style="fill:#2b71b8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33767188"
+         id="path3416"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
